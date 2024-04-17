@@ -1,0 +1,82 @@
+.ticket {
+  margin-top: 25px;
+  height: 150px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  article {
+    margin: 10px;
+    display: flex;
+  }
+
+  &-interface {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    align-items: center;
+    justify-content: center;
+
+    &-company-name {
+      display: flex;
+      font-weight: 700;
+
+      &-logo {
+        width: 40px;
+      }
+    }
+
+    &-buy-ticket-button {
+      margin-top: 5px;
+    }
+  }
+
+  .ticket-flight {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    &-info {
+      &-time {
+        font-size: 28px;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      &-place {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 5px 0 0;
+      }
+
+      &-date {
+        font-size: 14px;
+        margin: 3px 0 0;
+      }
+    }
+
+    &-stops {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: #808080;
+
+      &-line {
+        display: flex;
+        align-items: center;
+
+        &-contour {
+          width: 150px;
+          height: 1px;
+          background-color: #C0C0C0;
+        }
+
+        & img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

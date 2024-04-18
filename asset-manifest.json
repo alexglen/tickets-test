@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/tickets-test/static/css/main.c3ead42c.css",
+    "main.js": "/tickets-test/static/js/main.2c0658e1.js",
+    "static/media/logo.png": "/tickets-test/static/media/logo.28b2df359a17578127dd.png",
+    "static/media/BA.svg": "/tickets-test/static/media/BA.a5c142e0aa54c1f8f43f093fde80d75f.svg",
+    "static/media/SU.svg": "/tickets-test/static/media/SU.e3d277dbceae2790eb072cf8efc04618.svg",
+    "static/media/S7.svg": "/tickets-test/static/media/S7.478dc40a383841cac88b3639e143ea0c.svg",
+    "static/media/TK.svg": "/tickets-test/static/media/TK.b0183014515a2f04f2a816eccd9ce39d.svg",
+    "index.html": "/tickets-test/index.html",
+    "main.c3ead42c.css.map": "/tickets-test/static/css/main.c3ead42c.css.map",
+    "main.2c0658e1.js.map": "/tickets-test/static/js/main.2c0658e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3ead42c.css",
+    "static/js/main.2c0658e1.js"
+  ]
+}

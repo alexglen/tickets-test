@@ -4,8 +4,8 @@ import {StopsFilter} from "../StopsFilter/StopsFilter";
 import Card from "@mui/material/Card";
 import "./Filters.scss";
 
-export const Filters = () => {
-    return (
+export const Filters = () =>
+    (
         <Card className="filters">
             <h4>
                 ВАЛЮТА
@@ -17,4 +17,3 @@ export const Filters = () => {
             <StopsFilter/>
         </Card>
     )
-}

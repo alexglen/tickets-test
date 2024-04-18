@@ -10,7 +10,7 @@ export const App = () => {
         currentCurrency: "rub",
         usd: null,
         eur: null,
-        stops: [1, 2, 3, 4]
+        stops: [0, 1, 2, 3],
     });
 
     return (

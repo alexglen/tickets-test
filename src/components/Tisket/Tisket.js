@@ -1,11 +1,12 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import logo from "../../images/turkishairlines.svg";
+import {Button, Card, CardContent, styled} from "@mui/material";
+import {blue} from "@mui/material/colors"
+import BA from "../../images/BA.svg";
+import S7 from "../../images/S7.svg";
+import SU from "../../images/SU.svg";
+import TK from "../../images/TK.svg";
 import ticketIcon from "../../images/ticketIcon.png";
-import {styled} from "@mui/material/styles";
-import {blue} from "@mui/material/colors";
+import {carrierNames} from "../../data";
 import {formatDate, getWordWithCountOfStopsInRightCase} from "../../helpers";
 import "./Ticket.scss";
 
@@ -35,6 +36,7 @@ export const Ticket = (props) => {
     } = props;
 
     const currencySymbol = (type === "rub") ? "₽" : (type === "usd") ? "$" : "€";
+    const carriers = {BA, SU, S7, TK};
 
     return (
         <Card className="ticket">
@@ -42,10 +44,9 @@ export const Ticket = (props) => {
                 <article>
                     <div className="ticket-interface">
                         <div className="ticket-interface-company-name">
-                            TURKISH <br/>
-                            AIRLINES
+                            <div className="ticket-interface-company-name-title">{carrierNames[carrier]}</div>
                             <div className="ticket-interface-company-name-logo">
-                                <img src={logo} alt="turkish airlines logo"/>
+                                <img src={carriers[carrier]} alt="turkish airlines logo"/>
                             </div>
                         </div>
                         <div className="ticket-interface-buy-ticket-button">

@@ -21,9 +21,19 @@
     &-company-name {
       display: flex;
       font-weight: 700;
+      justify-content: center;
+      width: 150px;
 
       &-logo {
-        width: 40px;
+        width: 50px;
+      }
+
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+        margin-right: 7px;
       }
     }
 

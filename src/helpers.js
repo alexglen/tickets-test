@@ -49,5 +49,5 @@ export const getDataWithCurrentCurrency = (data, currency) => {
 
 export const filteredData = (data, currency) => {
     const {stops} = currency;
-    return data.filter(ticket => stops.includes(ticket.stops));
+    return [...data.filter(ticket => stops.includes(ticket.stops))].sort((a, b) => a.price - b.price);
 }

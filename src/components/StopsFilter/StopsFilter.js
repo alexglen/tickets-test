@@ -1,6 +1,7 @@
 import React, {useContext, useState} from "react";
 import {Checkbox, FormControlLabel, FormGroup} from "@mui/material";
 import {CurrencyContext} from "../../Context/CurrencyContext";
+import {stopsObject} from "../../data";
 
 export const StopsFilter = () => {
     const {setCurrency, currency: {stops}} = useContext(CurrencyContext);
@@ -12,23 +13,21 @@ export const StopsFilter = () => {
         three: true,
     });
 
-    const setStopsFilter = (event) => {
-        const helperObject = {one: 1, two: 2, three: 3, zero: 0};
-        if (stops.includes(helperObject[event.target.name])) {
-            const index = stops.indexOf(helperObject[event.target.name]);
+    const setStopsFilter = ({target: {name, checked}}) => {
+        if (!checked) {
+            const index = stops.indexOf(stopsObject[name]);
             const newStopsArray = [...stops.slice(0, index), ...stops.slice(index + 1)];
-
             setCurrency(currency => ({
                 ...currency, stops: newStopsArray
             }));
         } else {
             setCurrency(currency => ({
-                ...currency, stops: [...currency.stops, helperObject[event.target.name]]
+                ...currency, stops: [...currency.stops, stopsObject[name]]
             }));
         }
         setValue({
             ...value,
-            [event.target.name]: event.target.checked,
+            [name]: checked,
         });
     };
 

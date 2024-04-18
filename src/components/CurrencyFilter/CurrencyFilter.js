@@ -1,6 +1,5 @@
 import React, {useContext, useState} from "react";
-import {ButtonGroup} from "@mui/material";
-import Button from "@mui/material/Button";
+import {ButtonGroup, Button} from "@mui/material";
 import {CurrencyContext} from "../../Context/CurrencyContext";
 
 export const CurrencyFilter = () => {
@@ -11,14 +10,11 @@ export const CurrencyFilter = () => {
         setActiveButton(target.name);
         try {
             const data = await fetch("https://www.cbr-xml-daily.ru/daily_json.js");
-            const {Valute: {USD, EUR}} = await data.json();
-            const usd = USD.Value;
-            const eur = EUR.Value;
+            const {Valute: {USD: {Value: usd}, EUR: {Value: eur}}} = await data.json();
             setCurrency(currency => ({...currency, eur, usd, currentCurrency: target.name}));
         } catch (error) {
             console.log("error", error);
         }
-
     }
 
     return (
